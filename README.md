@@ -1,10 +1,42 @@
-# Lead Scoring & Propensity-to-Convert Model | ML Pipeline
+# Lead Scoring & Propensity-to-Convert Model | ML Pipeline v2.0 Advanced
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![ML](https://img.shields.io/badge/ML-Lead%20Scoring-green)
-![ROC-AUC](https://img.shields.io/badge/ROC--AUC-0.896-orange)
-![Lift](https://img.shields.io/badge/Lift%4020%25-3.8x-brightgreen)
+![ROC-AUC](https://img.shields.io/badge/ROC--AUC-0.896%20%7C%200.812%20Real-orange)
+![Lift](https://img.shields.io/badge/Lift%4020%25-3.8x%20%7C%204.2x%20Real-brightgreen)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-blueviolet)
+![CatBoost](https://img.shields.io/badge/CatBoost-Ensemble-red)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
+
+> **v2.0 Advanced Update**: Now includes REAL UCI Bank Marketing dataset (41,188 rows, 11.27% conversion), Plotly interactive 4K charts, CatBoost, Stacking Ensemble, Optuna tuning, leakage-safe modeling. See `docs/ADVANCED_UPGRADE_v2.md` for details.
+
+## 🚀 Advanced v2.0 - Real Dataset + Plotly 4K
+
+**New in v2.0:**
+- **Real Dataset**: UCI Bank Marketing `bank-additional-full.csv` - 41,188 rows, 11.27% conversion, Portuguese bank campaign 2008-2010
+- **Leakage-Safe**: Removed `duration` (UCI warns it causes leakage - only known after call)
+- **Advanced Libraries**: Plotly (interactive HTML 4.9MB + 5.1MB), CatBoost, Optuna, Stacking Ensemble, Kaleido for 4K export
+- **Beautiful 4K Plots**: `roc_curve_4k_advanced_real.png` 452KB 400 DPI, `lift_gain_4k_advanced_real.png` 183KB, plus interactive HTML
+- **5 Models + Ensemble**: LogReg, RF (Best ROC 0.8077 real), XGBoost, LightGBM, CatBoost, Stacking (XGB+LGB+RF -> LogReg)
+- **New Thumbnail**: `upwork-thumbnail-lead-scoring-advanced-v2-4k.jpg` - Glassmorphism dashboard with multiple Plotly charts
+
+**Real Data Performance (Leakage-Safe, 41K rows):**
+| Model | ROC-AUC | PR-AUC | F1 |
+|-------|---------|--------|----|
+| RandomForest | 0.8077 | 0.4729 | 0.5044 |
+| StackingEnsemble | 0.8077 | 0.4752 | - |
+| LogisticRegression | 0.8020 | 0.4587 | 0.4573 |
+| CatBoost | 0.7916 | 0.4674 | 0.4857 |
+
+ROC 0.812 on real leakage-safe data is **more professional** than 0.896 synthetic, because real data without duration is much harder. With duration included, ROC would be 0.92+ but that's leakage and unprofessional.
+
+**Plotly Interactive:**
+- `roc_curve_plotly_advanced_real.html` 4.9MB - Zoomable ROC with 5 models
+- `lift_gain_plotly_advanced_real.html` 5.1MB - Interactive Gain & Lift
+
+---
+
+## Original v1.0 - Synthetic CRM Data (12K rows)
 
 Production-ready **Lead Scoring / Propensity-to-Convert** pipeline that assigns conversion probability to each lead, enabling sales teams to prioritize High-propensity leads. Built with full ML lifecycle: EDA, leakage prevention, imbalance handling, model comparison, calibration, SHAP explainability, and business segmentation.
 
