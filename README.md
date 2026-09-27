@@ -95,11 +95,11 @@ For interactive exploration (zoom, hover):
 
 Open in browser for full interactivity.
 
-### Thumbnails for Upwork Portfolio
+### Project Thumbnails
 
 <p align="center">
-  <img src="demo/upwork-thumbnail-lead-scoring-4k.jpg" width="48%" alt="Thumbnail v1">
-  <img src="demo/upwork-thumbnail-lead-scoring-advanced-v2-4k.jpg" width="48%" alt="Thumbnail v2 Advanced">
+  <img src="demo/thumbnail_lead_scoring_v1_4k.jpg" width="48%" alt="Thumbnail v1">
+  <img src="demo/thumbnail_lead_scoring_v2_advanced_4k.jpg" width="48%" alt="Thumbnail v2 Advanced">
 </p>
 
 *Left: v1 - 12K Leads, ROC 0.896, Lift 3.8x. Right: v2 Advanced - Real 41K, CatBoost Ensemble, ROC 0.812, Lift 4.2x, Plotly.*
@@ -180,8 +180,8 @@ scored = scorer.score_leads(new_leads_df)
 │   ├── model_comparison.csv
 │   └── final_metrics.csv
 ├── demo/
-│   ├── upwork-thumbnail-lead-scoring-4k.jpg
-│   └── upwork-thumbnail-lead-scoring-advanced-v2-4k.jpg
+│   ├── thumbnail_lead_scoring_v1_4k.jpg
+│   └── thumbnail_lead_scoring_v2_advanced_4k.jpg
 ├── docs/
 │   ├── Feature_Engineering.md
 │   ├── Model_Comparison.md

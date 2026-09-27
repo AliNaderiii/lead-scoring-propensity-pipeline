@@ -73,7 +73,7 @@ All new plots are 400 DPI, font size 12-14, bold titles, grid alpha 0.3, profess
 - Orange #ff7f0e for PR
 - Seaborn style + Plotly white template
 
-Thumbnail v2: `upwork-thumbnail-lead-scoring-advanced-v2-4k.jpg` - 4K, glassmorphism dashboard, multiple charts, neon accents.
+Thumbnail v2: `thumbnail_lead_scoring_v2_advanced_4k.jpg` - 4K, glassmorphism dashboard, multiple charts, neon accents.
 
 ### How to Use Advanced Version
 
