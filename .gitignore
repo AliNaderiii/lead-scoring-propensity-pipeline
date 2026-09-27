@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Data large
+data/*.npy
+*.pkl
+*.pkl.gz
+models/*.npy
+models/*.pkl
+!models/preprocessor.pkl
+!models/calibrated_model.pkl
+!models/best_model_*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Reports large numpy
+reports/*.npy
+
+# Secrets
+.env
+config.yaml

@@ -1,0 +1,47 @@
+# PowerShell Commands to Create New GitHub Repo - Lead Scoring
+
+# 1. Go to your local projects folder
+cd D:\
+
+# 2. Copy this pipeline to local (from Arena workspace)
+# Download UPWORK_4K_V2_FINAL.zip and LEAD_SCORING repo from Arena and extract to D:\
+# Or clone if you already pushed
+
+# 3. Create new repo folder locally
+mkdir D:\lead-scoring-propensity-pipeline
+cd D:\lead-scoring-propensity-pipeline
+
+# 4. Copy all files from Arena workspace (manually copy folder content)
+# Example: Copy-Item -Recurse C:\Users\YourName\Downloads\lead-scoring-propensity-pipeline\* .
+
+# 5. Git init
+git init
+git add .
+git commit -m "feat: Lead Scoring Propensity Model - ROC-AUC 0.896 Lift 3.8x production pipeline"
+
+# 6. Create GitHub repo via gh CLI or website
+# Option A - via gh CLI
+gh repo create lead-scoring-propensity-pipeline --public --source=. --remote=origin --push
+
+# Option B - manual
+# Go to github.com/new -> Create repo: lead-scoring-propensity-pipeline (Public, no README)
+# Then:
+git remote add origin https://github.com/AliNaderiii/lead-scoring-propensity-pipeline.git
+git branch -M main
+git push -u origin main
+
+# 7. Verify
+# Check https://github.com/AliNaderiii/lead-scoring-propensity-pipeline
+
+# 8. For Upwork Portfolio - Use these files as demo:
+# - demo/upwork-thumbnail-lead-scoring-4k.jpg (182KB) as cover
+# - reports/roc_curve_real.png
+# - reports/lift_gain_chart_real.png
+# - reports/shap_summary_real.png
+# - reports/confusion_matrix_real.png
+
+# 9. Optional: Create tag v1.0
+git tag v1.0
+git push origin v1.0
+
+# IMPORTANT: No Persian, no client trace, all English, 100% real plots
