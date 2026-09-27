@@ -87,13 +87,8 @@ All charts generated from real training with publication-ready styling (Seaborn 
 
 *Top 15 features by SHAP / importance - `was_previous_success`, `economic_stress`, `contact_cellular` are strongest predictors.*
 
-### Interactive Plotly Dashboards
 
-For interactive exploration (zoom, hover):
-- `reports/roc_curve_plotly_advanced_real.html` (4.9MB) - Interactive ROC with 7 models
-- `reports/lift_gain_plotly_advanced_real.html` (5.1MB) - Interactive Gain & Lift
 
-Open in browser for full interactivity.
 
 ### Project Thumbnails
 
@@ -141,7 +136,6 @@ python src/train_advanced.py  # 5 models + Ensemble, ROC 0.808 real
 
 # 5. Beautiful evaluation
 python src/evaluate_beautiful.py  # Generates 6 beautiful 300 DPI plots
-python src/evaluate_plotly.py  # Generates Plotly HTML + 4K PNG
 
 # 6. Score new leads
 python src/inference.py
@@ -176,7 +170,6 @@ scored = scorer.score_leads(new_leads_df)
 ├── reports/
 │   ├── *_beautiful_*.png (NEW - 6 beautiful 300 DPI)
 │   ├── *_4k_advanced_real.png (4K 400 DPI)
-│   ├── *_plotly_*.html (interactive)
 │   ├── model_comparison.csv
 │   └── final_metrics.csv
 ├── demo/
